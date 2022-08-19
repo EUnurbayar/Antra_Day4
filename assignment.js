@@ -136,3 +136,41 @@ console.log(test_prime(7));
 //9. Write a JavaScript function which accepts an argument and returns the type. 
 // Note: There are six possible values that typeof returns: object, boolean, function, number, string,
 // and undefined.
+
+
+
+function check_data_type(value){
+let dtypes = [Function, Number, String, Boolean, Object,RegExp], x, len;
+    
+if (typeof value === "object" || typeof value === "function"){
+     for (let i = 0, len = dtypes.length; i < len; i++){
+            if (value instanceof dtypes[i]){
+                return dtypes[i];
+            }
+      }
+    }
+    
+    return typeof value;
+}
+console.log(check_data_type(1));
+console.log(check_data_type("String"));
+console.log(check_data_type(false));
+
+
+//10. Write a JavaScript function which returns the n rows by n columns identity matrix.
+
+function matrix(n) {
+    let i;
+    let j;
+
+    for (i=0; i < n; i++){
+      for (j=0; j < n; j++){
+           if (i === j){
+             console.log(" 1 ");
+           } else {
+             console.log(" 0 ");}
+            }
+         console.log("----------");
+       }
+   }
+matrix(4);
