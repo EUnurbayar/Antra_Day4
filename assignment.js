@@ -21,6 +21,7 @@ function reversedNum(num) {
   console.log(reversedNum(4321));
 
   //2. Write a JavaScript function that checks whether a passed string is palindrome or not?
+ 
   function isPalindrome(str) {
     var len = Math.floor(str.length / 2);
     for (var i = 0; i < len; i++)
@@ -34,7 +35,6 @@ function reversedNum(num) {
 //3. Write a JavaScript function that generates all combinations of a string. 
 //Example string: 'dog' 
 //Expected Output: d, do, dog, o, og, g 
-
 
   function combo(s){
     var split = [];
@@ -51,7 +51,7 @@ function reversedNum(num) {
     return res;
     };
     
-    console.log(combo('dog'));
+    console.log(combo("dog"));
 
 //4. Write a JavaScript function that returns a passed string with letters in alphabetical order.
 
@@ -65,13 +65,13 @@ function alphabet_order(str){
 //each word of the string in upper case. 
 
 function uppercase(str){
-    let array1 = str.split(' ');
+    let array1 = str.split(" ");
       let newarray1 = [];
     
     for(let i = 0; i < array1.length; i++){
         newarray1.push(array1[i].charAt(0).toUpperCase()+array1[i].slice(1));
      }
-    return newarray1.join(' ');
+    return newarray1.join(" ");
 };
     console.log(uppercase("the quick brown fox"));
 
@@ -91,7 +91,7 @@ function longestWord(str){
         }
     }  
     return word; 
-}
+};
 
 console.log(longestWord("Web Development Tutorial"))
 
@@ -109,7 +109,7 @@ function countVowels(str){
         }
     }
     return vowelNum;
-}
+};
 console.log(countVowels("The quick brown fox"));
 
 //8. Write a JavaScript function that accepts a number as a parameter and check the number is
@@ -129,15 +129,13 @@ function test_prime(n){
         }
         return true;  
     }
-}
+};
 
 console.log(test_prime(7));
 
 //9. Write a JavaScript function which accepts an argument and returns the type. 
 // Note: There are six possible values that typeof returns: object, boolean, function, number, string,
 // and undefined.
-
-
 
 function check_data_type(value){
 let dtypes = [Function, Number, String, Boolean, Object,RegExp], x, len;
@@ -151,7 +149,8 @@ if (typeof value === "object" || typeof value === "function"){
     }
     
     return typeof value;
-}
+};
+
 console.log(check_data_type(1));
 console.log(check_data_type("String"));
 console.log(check_data_type(false));
@@ -172,7 +171,8 @@ function matrix(n) {
             }
          console.log("----------");
        }
-   }
+   };
+
 matrix(4);
 
 //11. Write a JavaScript function which will take an array of numbers stored and find the second
@@ -195,7 +195,8 @@ function second(num){
     result.push(first[1], first[first.length - 2]);
     return result.join(',');
 
-}
+};
+
 console.log(second([7, 8, 9, 10, 11, 12]));
 
 //12. Write a JavaScript function which says whether a number is perfect. 
@@ -215,7 +216,7 @@ function isPerfect(number){
     else {
         return `${number} is not a perfect number!`;
     }
-}
+};
 
 console.log(isPerfect(28));
 
@@ -229,7 +230,8 @@ function getFactors(num){
         }
     }
     return result;
-}
+};
+
 console.log(getFactors(6));
 
 // 14. Write a JavaScript function to convert an amount to coins. 
@@ -241,7 +243,8 @@ function amountToCoins(amount, coins){
     }else{
         return amountToCoins(amount, coins.slice(1));
     }
-}
+};
+
 console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
 
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the
@@ -253,7 +256,8 @@ function baseExpo(base, expo){
         result *= base;
     }
     return result;
-}
+};
+
 console.log(baseExpo(2, 4));
 
 
@@ -271,7 +275,8 @@ function uniqueCharacters(str) {
         }
     }
     return unique;
-}
+};
+
 console.log(uniqueCharacters("thequickbrownfoxjumpsoverthelazydog"));
 
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
@@ -287,7 +292,7 @@ function occurence(str){
             count = 1;
         }
     }
-}
+};
 
 console.log(occurence("Hello World!"));
 
@@ -308,17 +313,17 @@ function binarySearch(n, arr){
     }
     return -1;
 }
-console.log(binarySearch(7, [1, 2, 5, 7, 9]))
-console.log(binarySearch(6, [1, 2, 5, 7, 9]))
+console.log(binarySearch(7, [1, 2, 5, 7, 9]));
+console.log(binarySearch(6, [1, 2, 5, 7, 9]));
 
 
 // 19. Write a JavaScript function that returns array elements larger than a number. 
 
 function largerElements(n, numArr){
     return numArr.filter( num => num > n);
-}
+};
 
-console.log(largerElements(7, [1, 4, 7, 3, 9, 13, 5, 52]))
+console.log(largerElements(7, [1, 4, 7, 3, 9, 13, 5, 52]));
 
 // 20. Write a JavaScript function that generates a string id (specified length) of random characters
 
@@ -329,8 +334,9 @@ function generateId(length){
         id += char_list.charAt(Math.floor(Math.random() * char_list.length));
     }
     return id;
-}
-console.log(generateId(8))
+};
+
+console.log(generateId(8));
 
 // 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2)
 // combinations in an array. 
@@ -346,13 +352,12 @@ function subSets(n, arr){
     }
     return subsets.filter(subset =>
         subset.length === n);
-}
+};
 
 console.log(subSets(3, [1, 2, 3, 4]));
 
 // 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function
 // will count the number of occurrences of the specified letter within the string.
-
 
 function letterCount(str, letter){
     let count = 0;
@@ -362,7 +367,7 @@ function letterCount(str, letter){
         }
     }
     return `${letter} occured ${count} times`;
-}
+};
 
 console.log(letterCount('Hello world!', 'l'));
 
@@ -376,13 +381,11 @@ function firstUnique(str){
         }
     }
     return null;
-}
+};
+
 console.log(firstUnique("abacddbec"));
 
-
-
 // 24. Write a JavaScript function to apply Bubble Sort algorithm.
-
 
 function bubbleSort(arr){
 
@@ -396,19 +399,20 @@ function bubbleSort(arr){
         }
     }
     return arr;
-}
+};
+
 console.log(bubbleSort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
 
 // 25. Write a JavaScript function that accept a list of country names as input and returns the
 // longest country name as output. 
 
 function longestCountryName(name){
-   
     let initialValue = "";
     return name.reduce(function (previousValue, currentValue) {
         return previousValue.length > currentValue.length ? previousValue : currentValue; },
         initialValue);
-}
+};
+
 console.log(longestCountryName(["Australia", "Germany", "United States of America"]));
 
 
@@ -432,7 +436,8 @@ function longestSubstr(str){
         result = temp.length > result.length? temp : result;
     }
     return result;
-}
+};
+
 console.log(longestSubstr("poiuytrewwertyui"));
 
 
@@ -483,5 +488,6 @@ callFunction(smile());
 
 function test(){  
     return arguments.callee.name;
- } 
+ } ;
+ 
 console.log(test());
