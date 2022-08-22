@@ -445,7 +445,7 @@ console.log(longestSubstr("poiuytrewwertyui"));
 
 function longestPalindrome(str){
 
-    var len = str.length;
+   let len = str.length;
     let output = "";
 
     const centeredPalindrome = (left, right) => {
