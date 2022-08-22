@@ -23,8 +23,8 @@ function reversedNum(num) {
   //2. Write a JavaScript function that checks whether a passed string is palindrome or not?
  
   function isPalindrome(str) {
-    var len = Math.floor(str.length / 2);
-    for (var i = 0; i < len; i++)
+    let len = Math.floor(str.length / 2);
+    for (let i = 0; i < len; i++)
       if (str[i] !== str[str.length - i - 1])
         return false;
     return true;
@@ -37,11 +37,11 @@ function reversedNum(num) {
 //Expected Output: d, do, dog, o, og, g 
 
   function combo(s){
-    var split = [];
-    var res = [];
+    let split = [];
+    let res = [];
     for (let i = 0; i < s.length; i++){
         split = [s[i]];
-        var index = 0;
+        let index = 0;
         while(res[index]){
             split.push('' + res[index] + s[i]);
             index++;
